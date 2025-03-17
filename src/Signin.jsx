@@ -1,21 +1,26 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
+
+//import { useEffect } from 'react'
+import UseLocalStorage from './UseLocalStorage'
 
 const Signin = () => {
-  const [email,setEmail]=useState("")
+ // const [email,setEmail]=useState("")
   const[password,setpassword]=useState("")
+  //object destructuring
+  const{email,setEmail}=UseLocalStorage();
 
-  useEffect(()=>{
-    let email= localStorage.getItem("email")
-    if(email){
-     setEmail(email)
-    }
+//   useEffect(()=>{
+//     let email= localStorage.getItem("email")
+//     if(email){
+//      setEmail(email)
+//     }
  
-   },[])
-  useEffect(() => {
-   localStorage.setItem("email",email);
+//    },[])
+//   useEffect(() => {
+//    localStorage.setItem("email",email);
    
-  }, [email])
+//   }, [email])
 
   
   

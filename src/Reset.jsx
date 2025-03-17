@@ -1,20 +1,22 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { useState } from 'react'
+import UseLocalStorage from './UseLocalStorage'
+// import { useEffect } from 'react'
+// import { useState } from 'react'
 
 const Reset = () => {
 
-    const[email,setEmail]=useState("")
-    useEffect(() => {
-    let email=  localStorage.getItem("email")
-    if(email){
-        setEmail(email)
-    }
-    }, [])
-    useEffect(()=>{
-        localStorage.setItem("email",email)
-    },[email])
-    
+    // const[email,setEmail]=useState("")
+    // useEffect(() => {
+    // let email=  localStorage.getItem("email")
+    // if(email){
+    //     setEmail(email)
+    // }
+    // }, [])
+    // useEffect(()=>{
+    //     localStorage.setItem("email",email)
+    // },[email])
+    const{email,setEmail}=UseLocalStorage();
 
   return (
     <div>
